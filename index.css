@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: system-ui;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #2a3465;
+  gap: 1rem;
+}
+
+.button, .box, .link {
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  text-align: center;
+  min-width: 7rem;
+  width: fit-content;
+  background: transparent;
+  border-radius: .7rem;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.box:hover, .link:hover, .button:hover {
+  color: transparent;
+  background: linear-gradient(to right, #eccb23, #ec1f1f);
+  background-clip: text;
+
+  /* suporte */
+  -webkit-background-clip: text;
+}
+
+/* BORDER GRADIENT */
+.button::before, .box::before, .link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  padding: .19rem;
+  background: #fff;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#ff1 0 0);
+  mask-composite: exclude;
+
+  /* suporte */
+  -webkit-mask-composite: destination-out;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#ff1 0 0);
+  -webkit-mask-composite: destination-out;
+} 
+.button:hover::before, .box:hover::before, .link:hover::before {
+  background: linear-gradient(to right, #eccb23, #ec1f1f);
+}
