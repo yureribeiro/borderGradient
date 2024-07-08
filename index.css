@@ -19,6 +19,15 @@ body {
   gap: 1rem;
 }
 
+.title {
+  color: #ffff;
+  text-align: center;
+  margin-bottom: 1remm;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+
 .button, .box, .link {
   position: relative;
   padding: 1rem;
